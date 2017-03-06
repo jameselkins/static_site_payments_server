@@ -1,0 +1,22 @@
+{
+  "name": "Static Site Payments Server",
+  "description": "A barebones way to accept payments from your static site",
+  "repository": "https://github.com/jameselkins/static_site_payments_server",
+  "keywords": ["ruby", "sinatra", "static", "stripe"],
+  "env": {
+    "STRIPE_PUBLISHABLE_KEY": {
+      "description": "The publishable key for your Stripe account"
+    },
+    "STRIPE_SECRET_KEY": {
+      "description": "The secret key for your Stripe account"
+    },
+    "PAGE_AFTER_PURCHASE": {
+      "description": "The url that you want your users to be after they complete their purchase. This might be a thank you page.",
+      "value": "https://www.mysite.com/thankyou"
+    },
+    "PRODUCT_LIST_KEYED_BY_AMOUNT_DESC_KEY": {
+      "description": "A list of products with descriptions, amounts, and product keys that you want to be able to offer.",
+      "value": "[{\"product_key\": \"test_product\", \"amount\": 500, \"description\": \"this is a test product\"},{\"product_key\": \"test_product_2\", \"amount\": 600, \"description\": \"this is a second test product\"}]"
+    }
+  }
+}

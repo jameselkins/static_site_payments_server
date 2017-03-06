@@ -1,0 +1,10 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore local gems
+vendor/bundle
+vendor
+.bundle/config
+# Other
+.DS_Store
+.env

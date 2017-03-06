@@ -1,0 +1,16 @@
+This is the test stripe payment form for all of the products
+
+- settings.product_list.each do |product|
+  %form.payment{action: '/', method: 'post'}
+    %article
+      %label.amount
+        %span 
+          = "Amount: #{Money.us_dollar(product['amount']).format}"
+    %article
+      %label.Description
+        %span 
+          = "Description: #{product['description']}"
+    %input#product_key{name: "product_key", type: 'hidden', value: "#{product['product_key']}"}/
+    %script.stripe-button{"data-amount" => "#{product['amount']}", "data-description" => "#{product['description']}", "data-key" => "#{settings.stripe_publishable_key}", "data-locale" => "auto", :src => "https://checkout.stripe.com/checkout.js"}
+  %br
+  %br

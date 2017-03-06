@@ -1,0 +1,748 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?limit=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/2.0.1
+      Authorization:
+      - Bearer sk_test_w8Q3gOlA1OJH99A6Ltz1hijL
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"2.0.1","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        Jamess-MacBook-Pro-4.local 16.3.0 Darwin Kernel Version 16.3.0: Thu Nov 17
+        20:23:58 PST 2016; root:xnu-3789.31.2~1/RELEASE_X86_64 x86_64","hostname":"Jamess-MacBook-Pro-4.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 06 Mar 2017 10:01:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '13126'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_AEmDbHXhYc9WTN
+      Stripe-Version:
+      - '2017-02-14'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [
+            {
+              "id": "cus_AEmDkHP0A0SyIs",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488794504,
+              "currency": null,
+              "default_source": "card_19uIeb2fM1xslBXYniNGj3ev",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "george@malarky.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uIeb2fM1xslBXYniNGj3ev",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEmDkHP0A0SyIs",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "george@malarky.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEmDkHP0A0SyIs/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEmDkHP0A0SyIs/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEm9rYvOBmmE1E",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488794263,
+              "currency": null,
+              "default_source": "card_19uIZB2fM1xslBXYm6y692Ia",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "george@new_guy.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uIZB2fM1xslBXYm6y692Ia",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEm9rYvOBmmE1E",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "george@malarky.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEm9rYvOBmmE1E/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEm9rYvOBmmE1E/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEl200JZSyixug",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488790100,
+              "currency": null,
+              "default_source": "card_19uHUG2fM1xslBXY60IUkFEc",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "test@test.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uHUG2fM1xslBXY60IUkFEc",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEl200JZSyixug",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "test@test.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEl200JZSyixug/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEl200JZSyixug/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEko1ZB0pl37wJ",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488789278,
+              "currency": null,
+              "default_source": "card_19uHIb2fM1xslBXYdRZzUEe8",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "huggler@muggler.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uHIb2fM1xslBXYdRZzUEe8",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEko1ZB0pl37wJ",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "huggler@muggler.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEko1ZB0pl37wJ/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEko1ZB0pl37wJ/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEkmdcKBkFIY7d",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488789176,
+              "currency": null,
+              "default_source": "card_19uHGh2fM1xslBXYZ8fkoiEe",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "monkey@mooblah.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uHGh2fM1xslBXYZ8fkoiEe",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEkmdcKBkFIY7d",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "monkey@mooblah.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEkmdcKBkFIY7d/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEkmdcKBkFIY7d/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEkKCO5v7XVYpX",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488787485,
+              "currency": null,
+              "default_source": "card_19uGpf2fM1xslBXYVRGOhWq1",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "moo@monkey.coms",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uGpf2fM1xslBXYVRGOhWq1",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEkKCO5v7XVYpX",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "moo@monkey.coms",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEkKCO5v7XVYpX/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEkKCO5v7XVYpX/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEkE0Emg3Uuo5d",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488787120,
+              "currency": null,
+              "default_source": "card_19uGj92fM1xslBXY4T5kTeKs",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "moo@monkey.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uGj92fM1xslBXY4T5kTeKs",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEkE0Emg3Uuo5d",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "moo@monkey.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEkE0Emg3Uuo5d/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEkE0Emg3Uuo5d/subscriptions"
+              }
+            },
+            {
+              "id": "cus_AEkAj5i9wjX7RC",
+              "object": "customer",
+              "account_balance": 0,
+              "created": 1488786888,
+              "currency": null,
+              "default_source": "card_19uGfq2fM1xslBXYe6JYwqyy",
+              "delinquent": false,
+              "description": null,
+              "discount": null,
+              "email": "george@monkey.com",
+              "livemode": false,
+              "metadata": {},
+              "shipping": null,
+              "sources": {
+                "object": "list",
+                "data": [
+                  {
+                    "id": "card_19uGfq2fM1xslBXYe6JYwqyy",
+                    "object": "card",
+                    "address_city": null,
+                    "address_country": null,
+                    "address_line1": null,
+                    "address_line1_check": null,
+                    "address_line2": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_zip_check": null,
+                    "brand": "Visa",
+                    "country": "US",
+                    "customer": "cus_AEkAj5i9wjX7RC",
+                    "cvc_check": "pass",
+                    "dynamic_last4": null,
+                    "exp_month": 11,
+                    "exp_year": 2019,
+                    "fingerprint": "qXdEaayW1ONha6Rl",
+                    "funding": "credit",
+                    "last4": "4242",
+                    "metadata": {},
+                    "name": "george@monkey.com",
+                    "tokenization_method": null
+                  }
+                ],
+                "has_more": false,
+                "total_count": 1,
+                "url": "/v1/customers/cus_AEkAj5i9wjX7RC/sources"
+              },
+              "subscriptions": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/customers/cus_AEkAj5i9wjX7RC/subscriptions"
+              }
+            }
+          ],
+          "has_more": false,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 06 Mar 2017 10:01:47 GMT
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/customers
+    body:
+      encoding: UTF-8
+      string: email=george%40new_new_guy.com&source=tok_19uIdj2fM1xslBXYjJEiCVpu
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/2.0.1
+      Authorization:
+      - Bearer sk_test_w8Q3gOlA1OJH99A6Ltz1hijL
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"2.0.1","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        Jamess-MacBook-Pro-4.local 16.3.0 Darwin Kernel Version 16.3.0: Thu Nov 17
+        20:23:58 PST 2016; root:xnu-3789.31.2~1/RELEASE_X86_64 x86_64","hostname":"Jamess-MacBook-Pro-4.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 06 Mar 2017 10:01:49 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1420'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_AEmDlIEJRoiLB1
+      Stripe-Version:
+      - '2017-02-14'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "cus_AEmDWSoycmlhV1",
+          "object": "customer",
+          "account_balance": 0,
+          "created": 1488794508,
+          "currency": null,
+          "default_source": "card_19uIdj2fM1xslBXY4JdegkoL",
+          "delinquent": false,
+          "description": null,
+          "discount": null,
+          "email": "george@new_new_guy.com",
+          "livemode": false,
+          "metadata": {},
+          "shipping": null,
+          "sources": {
+            "object": "list",
+            "data": [
+              {
+                "id": "card_19uIdj2fM1xslBXY4JdegkoL",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_AEmDWSoycmlhV1",
+                "cvc_check": "pass",
+                "dynamic_last4": null,
+                "exp_month": 11,
+                "exp_year": 2019,
+                "fingerprint": "qXdEaayW1ONha6Rl",
+                "funding": "credit",
+                "last4": "4242",
+                "metadata": {},
+                "name": "george@new_new_guy.com",
+                "tokenization_method": null
+              }
+            ],
+            "has_more": false,
+            "total_count": 1,
+            "url": "/v1/customers/cus_AEmDWSoycmlhV1/sources"
+          },
+          "subscriptions": {
+            "object": "list",
+            "data": [],
+            "has_more": false,
+            "total_count": 0,
+            "url": "/v1/customers/cus_AEmDWSoycmlhV1/subscriptions"
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 06 Mar 2017 10:01:49 GMT
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/charges
+    body:
+      encoding: UTF-8
+      string: amount=500&description=test_product%3A+this+is+a+test+product&currency=usd&customer=cus_AEmDWSoycmlhV1
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/2.0.1
+      Authorization:
+      - Bearer sk_test_w8Q3gOlA1OJH99A6Ltz1hijL
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"2.0.1","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        Jamess-MacBook-Pro-4.local 16.3.0 Darwin Kernel Version 16.3.0: Thu Nov 17
+        20:23:58 PST 2016; root:xnu-3789.31.2~1/RELEASE_X86_64 x86_64","hostname":"Jamess-MacBook-Pro-4.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 06 Mar 2017 10:01:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1798'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_AEmDmovtTDwtH7
+      Stripe-Version:
+      - '2017-02-14'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "ch_19uIf42fM1xslBXYJmdGOlQ0",
+          "object": "charge",
+          "amount": 500,
+          "amount_refunded": 0,
+          "application": null,
+          "application_fee": null,
+          "balance_transaction": "txn_19uIf42fM1xslBXYhtAVR8SE",
+          "captured": true,
+          "created": 1488794510,
+          "currency": "usd",
+          "customer": "cus_AEmDWSoycmlhV1",
+          "description": "test_product: this is a test product",
+          "destination": null,
+          "dispute": null,
+          "failure_code": null,
+          "failure_message": null,
+          "fraud_details": {},
+          "invoice": null,
+          "livemode": false,
+          "metadata": {},
+          "on_behalf_of": null,
+          "order": null,
+          "outcome": {
+            "network_status": "approved_by_network",
+            "reason": null,
+            "seller_message": "Payment complete.",
+            "type": "authorized"
+          },
+          "paid": true,
+          "receipt_email": null,
+          "receipt_number": null,
+          "refunded": false,
+          "refunds": {
+            "object": "list",
+            "data": [],
+            "has_more": false,
+            "total_count": 0,
+            "url": "/v1/charges/ch_19uIf42fM1xslBXYJmdGOlQ0/refunds"
+          },
+          "review": null,
+          "shipping": null,
+          "source": {
+            "id": "card_19uIdj2fM1xslBXY4JdegkoL",
+            "object": "card",
+            "address_city": null,
+            "address_country": null,
+            "address_line1": null,
+            "address_line1_check": null,
+            "address_line2": null,
+            "address_state": null,
+            "address_zip": null,
+            "address_zip_check": null,
+            "brand": "Visa",
+            "country": "US",
+            "customer": "cus_AEmDWSoycmlhV1",
+            "cvc_check": "pass",
+            "dynamic_last4": null,
+            "exp_month": 11,
+            "exp_year": 2019,
+            "fingerprint": "qXdEaayW1ONha6Rl",
+            "funding": "credit",
+            "last4": "4242",
+            "metadata": {},
+            "name": "george@new_new_guy.com",
+            "tokenization_method": null
+          },
+          "source_transfer": null,
+          "statement_descriptor": null,
+          "status": "succeeded",
+          "transfer_group": null
+        }
+    http_version: 
+  recorded_at: Mon, 06 Mar 2017 10:01:50 GMT
+recorded_with: VCR 3.0.3
