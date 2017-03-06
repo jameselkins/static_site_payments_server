@@ -42,7 +42,7 @@ post '/' do
 
   customers = {}
   # TODO: wrap in error handler
-  # TODO:
+  # TODO: detect whether there are duplicate emails
   Stripe::Customer.list(limit: settings.customer_list_page_size).auto_paging_each do |customer|
     customers[customer.email] = customer.id
   end
@@ -51,6 +51,7 @@ post '/' do
   customer_id = customers[params[:stripeEmail]] ||
       Stripe::Customer.create(email: params[:stripeEmail], source: params[:stripeToken]).id
 
+  # TODO: wrap in error handler
   Stripe::Charge.create(
     amount: product['amount'],
     description: "#{product['product_key']}: #{product['description']}",
@@ -58,5 +59,6 @@ post '/' do
     customer: customer_id
   )
 
+  # TODO: redirect to product specific page
   redirect to(settings.page_after_purchase)
 end
